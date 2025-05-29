@@ -44,38 +44,49 @@ conda update conda
 
 🚀 Setup Instructions
 ✅ Create Conda Environment (Python 3.8)
+
 conda create -n llm_env python=3.8
 conda activate llm_env
 
 🔧 Install System Dependencies
+
 sudo apt install python3-dev
 sudo apt-get install build-essential -y
 
 📦 Install Python Libraries
+
 pip install langchain unstructured openai chromadb Cython tiktoken pypdf streamlit --user
 
 🧪 (Optional) Create Python 3.7 Env
+
 conda create -n llm_env37 python=3.7
 
 Repeat system dependency and pip install steps inside this env if needed.
 🧠 Install ML & App Frameworks
+
 pip install "transformers[torch]"
 pip install scikit-learn stqdm flask
 
 🧠 Register Environment with Jupyter Kernel
 If you plan to use Jupyter with this environment:
+
 python -m ipykernel install --user --name=llm_env
 
 
 📦 Usage
+
 🔑 Add Your OpenAI API Key
 Create or edit the following file:
+
 # .streamlit/secrets.toml
 [openai]
+
 api_key = "your_openai_api_key_here"
 
 🚀 Run the App
+
 Navigate to your project folder and start the app:
+
 cd "your/project/folder/path"
 streamlit run AskVerse.py
 
