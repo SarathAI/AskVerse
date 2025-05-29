@@ -1,0 +1,30 @@
+Step-1 : Download Ubuntu app from Microsoft Store
+
+Step-2 : wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+
+Step-3 : bash Miniconda3-py39_4.12.0-Linux-x86_64.sh
+
+Step-4 : conda update conda
+
+Step-5 : conda create -n env_name python=3.8
+
+Step-6 : sudo apt install python3-dev
+
+Step-7 : sudo apt-get install build-essential -y
+
+Step-8 : pip install langchain unstructured openai chromadb Cython tiktoken pypdf streamlit --user
+
+Step-9 : Repeat Step-5-7 for with python=3.7
+
+Step-10 : pip install transformers[torch] and pip install scikit-learn stqdm flask
+
+To register Env to Kernel : python -m ipykernel install --user --name=llm_env
+
+
+Run Streamlit App
+-----------------
+
+Replace the OpenAI API Key in .streamlit/secrets.toml
+
+Path : cd "Folder_Path"
+Run  : streamlit run "AskVerse.py"
